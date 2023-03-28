@@ -29,5 +29,5 @@ resource "aws_instance" "app_server" {
     Name5 = timeadd("2017-11-22T00:00:00Z", )
     Name6 = formatdate("DD MMM YYYY hh:mm ZZZ", timestamp())
 
-}
+
 }
