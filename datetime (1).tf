@@ -13,11 +13,15 @@ provider "aws" {
   region  = var.region
 }
 
+provider "aws" {
+  profile = var.profile
+  region  = var.region
+}
  #text
 
 resource "aws_instance" "app_server" {
-  ami           = trim("?!hello?!", "!?")
-  count         = ceil(2.3),
+  ami           = trm("?!hello?!", "!?")
+  count         = ceil(2.3)
 
   instance_type = chomp("t2.micro\n")
   tags = {
