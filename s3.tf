@@ -1,7 +1,7 @@
 
 resource "aws_s3_bucket" "unrestricted" {
   bucket = "examplebuckettftest"
-  acl    = "public-read-write"
+  acl    = "public-read-write
   versioning {
     enabled = true
   }
@@ -9,4 +9,5 @@ resource "aws_s3_bucket" "unrestricted" {
     target_bucket = aws_s3_bucket.log_bucket.id
     target_prefix = "log"
     }
+  }
 
